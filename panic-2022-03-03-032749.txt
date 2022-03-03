@@ -1,0 +1,66 @@
+panic(cpu 0 caller 0xffffff8012d8776f): Kernel trap at 0xffffff7f94819964, type 14=page fault, registers:
+CR0: 0x000000008001003b, CR2: 0x0000000000000033, CR3: 0x000000001681e000, CR4: 0x00000000003627e0
+RAX: 0x0000000000000000, RBX: 0xffffff80346d89b0, RCX: 0x0000000000000202, RDX: 0xffffff81cfde22a0
+RSP: 0xffffff9217ea38f0, RBP: 0xffffff9217ea3920, RSI: 0xffffff9217ea39c0, RDI: 0xffffff80346d89b0
+R8:  0xffffff9217ea3760, R9:  0x0000000000000008, R10: 0x0000000000000010, R11: 0x0000000000000000
+R12: 0xffffff80346d89b0, R13: 0xffffff7f94889ad8, R14: 0x0000000000000000, R15: 0x0000000000004006
+RFL: 0x0000000000010202, RIP: 0xffffff7f94819964, CS:  0x0000000000000008, SS:  0x0000000000000010
+Fault CR2: 0x0000000000000033, Error code: 0x0000000000000000, Fault CPU: 0x0, PL: 0, VF: 1
+
+Backtrace (CPU 0), Frame : Return Address
+0xffffff9217ea33c0 : 0xffffff8012c6c1c6 
+0xffffff9217ea3410 : 0xffffff8012d95274 
+0xffffff9217ea3450 : 0xffffff8012d87544 
+0xffffff9217ea34c0 : 0xffffff8012c1e1e0 
+0xffffff9217ea34e0 : 0xffffff8012c6bc3c 
+0xffffff9217ea3610 : 0xffffff8012c6b9fc 
+0xffffff9217ea3670 : 0xffffff8012d8776f 
+0xffffff9217ea37e0 : 0xffffff8012c1e1e0 
+0xffffff9217ea3800 : 0xffffff7f94819964 
+0xffffff9217ea3920 : 0xffffff7f94831054 
+0xffffff9217ea3960 : 0xffffff7f94830dbc 
+0xffffff9217ea39b0 : 0xffffff7f94830d03 
+0xffffff9217ea3a10 : 0xffffff7f9482e4b1 
+0xffffff9217ea3a50 : 0xffffff7f948336d8 
+0xffffff9217ea3a80 : 0xffffff7f94857d0c 
+0xffffff9217ea3ad0 : 0xffffff7f948588b3 
+0xffffff9217ea3b50 : 0xffffff7f9485a1ad 
+0xffffff9217ea3b90 : 0xffffff7f9485ae9e 
+0xffffff9217ea3be0 : 0xffffff7f94852360 
+0xffffff9217ea3c20 : 0xffffff7f94856ac1 
+0xffffff9217ea3c80 : 0xffffff7f9484fa01 
+0xffffff9217ea3cd0 : 0xffffff7f94814b99 
+0xffffff9217ea3d20 : 0xffffff7f948190eb 
+0xffffff9217ea3d40 : 0xffffff80132b9658 
+0xffffff9217ea3d90 : 0xffffff80132e7a03 
+0xffffff9217ea3e00 : 0xffffff801328154b 
+0xffffff9217ea3e50 : 0xffffff801327e738 
+0xffffff9217ea3eb0 : 0xffffff801327b713 
+0xffffff9217ea3ef0 : 0xffffff801327b5a2 
+0xffffff9217ea3f30 : 0xffffff8013297ef2 
+0xffffff9217ea3f70 : 0xffffff801329752c 
+0xffffff9217ea3fa0 : 0xffffff8012c1d557 
+      Kernel Extensions in backtrace:
+         com.apple.driver.AppleACPIPlatform(6.1)[B0282791-F78C-3A3D-A829-629AD847C7EA]com.apple.0xffffff7f94809000-com.apple.driver.0xffffff7f948a4fff
+            dependency: com.apple.iokit.IOACPIFamily(1.4)[95DA39BB-7C39-3742-A2E5-86C555E21D67]com.apple.0xffffff7f9395b000
+            dependency: com.apple.iokit.IOPCIFamily(2.9)[AEA4C7F5-CCB0-338B-B471-CF28A9792522]com.apple.0xffffff7f93494000
+            dependency: com.apple.driver.AppleSMC(3.1.9)[2D1E4A3F-A19E-3F12-878D-807CB79CD55F]com.apple.0xffffff7f93964000
+
+BSD process name corresponding to current thread: kernel_task
+Boot args: nvda_drv_vrl=1 
+
+Mac OS version:
+17G66
+
+Kernel version:
+Darwin Kernel Version 17.7.0: Thu Jun 21 22:53:14 PDT 2018; root:xnu-4570.71.2~1/RELEASE_X86_64
+Kernel UUID: 1AE5ACFD-3B6F-3D74-AD52-31F1430DBC6F
+Kernel slide:     0x0000000012a00000
+Kernel text base: 0xffffff8012c00000
+__HIB  text base: 0xffffff8012b00000
+System model name: iMacPro1,1 (Mac-7BA5B2D9E42DDD94)
+
+System uptime in nanoseconds: 1133420179382
+last loaded kext at 246045715373: com.apple.filesystems.msdosfs	1.10 (addr 0xffffff7f93c45000, size 69632)
+last unloaded kext at 972632550248: ru.joedm.SMCSuperIO	1.2.8 (addr 0xffffff7f95546000, size 106496)
+loaded kexts:
